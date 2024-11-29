@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+.navbar {
+  top: 0%;
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  background-color: #33333363;
+  backdrop-filter: blur(5px);
+  z-index: 99;
+}
+.brand {
+  width: 2%;
+  z-index: 50;
+}
+.logo-image {
+  width: 100%;
+}
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  transition: ease-in-out 0.3s;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+}
+.nav-link:hover {
+  font-weight: 500;
+  color: #2ec4b6;
+}
+.hamburger {
+  cursor: pointer;
+  z-index: 10;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 1.5px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(255, 255, 255);
+}
+/* hamburger menu animation for open and close  */
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+/* show navigation menu */
+.nav-menu {
+  position: absolute;
+  padding: 5rem 5rem;
+  top: 0.5%;
+  left: -130%;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000000;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  transition: ease-in-out 0.3s;
+  z-index: 10;
+  list-style: none;
+}
+.nav-menu.active {
+  left: 0;
+}
+.heropage {
+  background-image: url(/images/luis-vasconcelos-wxj729MaPRY-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.hero-wrapper-overlay {
+  background-color: #000000ad;
+  mix-blend-mode: hard-light;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100vh;
+}
+.hero-text-only {
+  width: 750px;
+  text-align: center;
+  margin: auto;
+  padding-top: 15rem;
+}
+.hero-title {
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: 200;
+}
+.beautify-text {
+  font-weight: 200;
+  color: #2ec4b5;
+}
+.hero-text {
+  font-size: 15px;
+  color: #cdcdcd;
+  line-height: 23px;
+  padding: 1rem 0;
+}
+
+.hero-btn-link {
+  padding: 1rem 2rem;
+  background-color: #12dac6;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.hero-btn {
+  margin: 2.5rem 0;
+  color: #fff;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.hero-image-wrapper {
+  width: 30%;
+  margin: auto;
+}
+.hero-image {
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: exclusion;
+}
+.about-wrapper {
+  padding: 6rem 0;
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+.about-title {
+  font-size: 6rem;
+  color: #292929;
+  font-weight: 200;
+}
+.about-text {
+  font-size: 15px;
+  color: #353535;
+  line-height: 23px;
+  padding: 1rem 0;
+}
+.about-btn-link {
+  padding: 1rem 2rem;
+  background-color: #006258;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.about-btn {
+  margin: 2.5rem 0;
+  color: #fff;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.marquee-container {
+  position: relative;
+  width: 40%;
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  background-color: #ffffffda;
+  display: flex;
+  border-radius: 4rem;
+  align-items: center;
+  /* border: 2px solid #ddd; */
+  box-shadow: 0 0 3px #414141, 0 0 2px #414141, 0 0 30px #25ada8,
+    0 0 7px #414141;
+}
+.marquee-text {
+  position: absolute;
+  white-space: nowrap;
+  animation: scrollText 10s linear infinite;
+}
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.tools {
+  padding-top: 10.5rem;
+  margin: auto;
+}
+.toolbox-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.tool-1 {
+  width: 10%;
+  border-radius: 50rem;
+}
+.project {
+  background-color: #000000;
+  padding-bottom: 10rem;
+}
+.project-title {
+  font-size: 6rem;
+  color: #292929;
+  font-weight: 200;
+  padding: 8rem 0rem 8rem 4rem;
+  color: #cdcdcd;
+}
+.holding-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.inside-project {
+  width: 92%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.inside-project-1 {
+  width: 92%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.first-project-pic {
+  width: 100%;
+  opacity: 1;
+  transition: all ease-in-out 0.3s;
+  cursor: alias;
+}
+.first-project-pic:hover {
+  opacity: 0.5;
+}
+.first-project-vid {
+  width: 100%;
+  opacity: 1;
+  transition: all ease-in-out 0.3s;
+}
+.project-btn-link {
+  padding: 1rem 2rem;
+  background-color: #006258;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 1;
+  transition: all ease-in-out 0.3s;
+  width: 92%;
+  margin: auto;
+}
+.project-btn {
+  margin: 2.5rem 0;
+  color: #fff;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.project-btn-link:hover {
+  opacity: 0.6;
+}
+.services {
+  background-color: #fff;
+  padding-bottom: 8rem;
+}
+.service-title {
+  font-size: 6rem;
+  color: #292929;
+  font-weight: 200;
+  padding: 8rem 0rem 8rem 4rem;
+  color: #262626;
+  width: 800px;
+}
+.help {
+  color: #006258;
+  border-bottom: solid 2.5px #006258;
+}
+.process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5rem;
+  width: 92%;
+  margin: auto;
+}
+.first-process {
+  width: 30%;
+}
+.first-process-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #006258;
+  padding: 1rem 0;
+}
+.first-process-text {
+  font-size: 15px;
+  color: #353535;
+  line-height: 23px;
+}
+.user {
+  font-size: 3rem;
+  color: #006258;
+  padding: 1rem;
+}
+footer {
+  background-color: #000000;
+  padding: 8rem 4rem;
+}
+.footer-image-box {
+  width: 20%;
+}
+.footer-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.appointment {
+}
+.inside-footer{
+    width: 80%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: auto;
+}
+.author {
+  font-size: 3rem;
+  color:#006258;
+  font-weight: 200;
+  padding: 1rem o;
+  width: 800px;
+}
+.text-name {
+  font-size: 15px;
+  color:#006258;
+  width: 30%;
+  line-height: 23px;
+}
